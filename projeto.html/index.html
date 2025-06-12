@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matheus Machado Komninou - Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .highlight {
+      color: #1b29a3;
+    }
+
+    .btn {
+      background-color: #363535;
+      color: #000;
+      font-weight: bold;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #af1414;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="flex justify-between items-center p-6 text-black">
+    <nav class="space-x-6 text-sm">
+      <a href="#inicio">Início</a>
+      <a href="#objetivo">Objetivo</a>
+      <a href="#formacao">Formação</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#idiomas">Idiomas</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main class="px-6 md:px-20" id="inicio">
+    <section class="text-center my-20">
+      <img src="cliente.jpg" alt="Foto de Matheus Machado Komninou" class="mx-auto rounded-full w-40 h-40 object-cover mb-6 shadow-md">
+      <h1 class="text-4xl font-bold"><span class="highlight">Matheus Machado</span></h1>
+      <p class="mt-4 text-sm max-w-xl mx-auto">Busco uma oportunidade para iniciar minha carreira como programador, aplicando meus conhecimentos em desenvolvimento de software, lógica de programação e tecnologias aprendidas em cursos e projetos pessoais.</p>
+    </section>
+
+    <section id="objetivo" class="my-20">
+      <h2 class="text-3xl font-bold text-center"> <span class="highlight">OBJETIVO PROFISSIONAL</span></h2>
+      <p class="text-sm mt-6 max-w-4xl mx-auto text-center">Busco uma oportunidade para iniciar minha carreira como programador, aplicando meus conhecimentos em desenvolvimento de software, lógica de programação e tecnologias aprendidas em cursos e projetos pessoais. Tenho grande interesse em aprender com profissionais experientes, contribuir com soluções eficientes e evoluir continuamente dentro da área de tecnologia.</p>
+    </section>
+
+    <section id="formacao" class="my-20">
+      <h2 class="text-3xl font-bold text-center"> <span class="highlight">FORMAÇÃO ACADÊMICA</span></h2>
+      <ul class="text-sm mt-6 max-w-4xl mx-auto list-disc list-inside">
+        <li>Ensino Médio Completo.</li>
+        <li>Superior de Tecnologia em Análise e Desenvolvimento de Sistemas – Universidade Positivo (em andamento, turno noturno).</li>
+      </ul>
+    </section>
+
+    <section id="habilidades" class="my-20">
+      <h2 class="text-3xl font-bold text-center"><span class="highlight">HABILIDADESE_COMPETÊNCIAS</span></h2>
+      <ul class="text-sm mt-6 max-w-4xl mx-auto list-disc list-inside">
+        <li>Manutenção e assistência técnica em TI.</li>
+        <li>Cabeamento e configuração de redes.</li>
+        <li>Conhecimentos básicos em hardware e infraestrutura.</li>
+      </ul>
+    </section>
+
+    <section id="idiomas" class="my-20">
+      <h2 class="text-3xl font-bold text-center"><span class="highlight">IDIOMAS</span></h2>
+      <ul class="text-sm mt-6 max-w-4xl mx-auto list-disc list-inside">
+        <li>Português: Nativo.</li>
+        <li>Espanhol: Intermediário.</li>
+        <li>Inglês: Básico (atualmente em curso de aprimoramento).</li>
+      </ul>
+    </section>
+
+    <section id="contato" class="my-20">
+      <h2 class="text-3xl font-bold text-center"> <span class="highlight">INFORMAÇÕES DE CONTATO</span></h2>
+      <div class="text-sm mt-6 max-w-4xl mx-auto space-y-2">
+        <p><strong>Nome:</strong> Matheus Machado Komninou</p>
+        <p><strong>Localidade:</strong> Curitiba, Paraná</p>
+        <p><strong>Telefone / WhatsApp:</strong> (41) 98825-5734</p>
+        <p><strong>E-mail:</strong> Theu.mmk@gmail.com</p>
+      </div>
+    </section>
+
+    <!-- Formulário de contato -->
+    <section id="formulario-contato" class="my-20 white text-white py-12">
+      <h2 class="text-3xl font-bold text-center mb-6"> <span class="text-blue-800">ENTRE EM CONTATO</span></h2>
+      <div class="max-w-xl mx-auto bg-blue-600 p-8 rounded-lg shadow-md">
+        <p class="text-center mb-6">Entre em contato para colaborações, freelas ou apenas para bater um papo sobre tecnologia:</p>
+        <form class="space-y-4">
+          <input type="text" placeholder="Seu nome" class="w-full px-4 py-2 rounded-md bg-white text-black placeholder-gray-500">
+          <input type="email" placeholder="Seu e-mail" class="w-full px-4 py-2 rounded-md bg-white text-black placeholder-gray-500">
+          <textarea placeholder="Sua mensagem" rows="5" class="w-full px-4 py-2 rounded-md bg-white text-black placeholder-gray-500"></textarea>
+          <button type="submit" class="block mx-auto mt-4 text-white">Enviar mensagem</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="text-center text-sm p-4 text-gray-400">
+    © 2025 Matheus Machado Komninou. Todos os direitos reservados.
+  </footer>
+
+</body>
+
+</html>
