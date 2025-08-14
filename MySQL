@@ -1,0 +1,60 @@
+drop database if exists empresa;
+
+create database empresa;
+
+use empresa;
+
+create table clientes(
+	id_cliente int not null auto_increment,
+    nome_cliente varchar(40) not null,
+    genero enum ('M', 'F'),
+    nascimento date,
+	cidade varchar(20) default 'Curitiba',
+    uf char(2) default 'PR',
+    primary key (id_cliente)
+);
+
+describe cliente;
+
+insert into clientes
+(id_cliente, nome_cliente, genero, nascimento, cidade, uf)
+values
+(1, 'Ana', 'F', '1990-07-25', 'Curitiba', 'PR');
+
+select * from clientes;
+
+insert into clientes
+(nome_cliente, genero, nascimento, cidade, uf)
+values
+('Beatriz', 'F', '1990-07-15', 'Curitiba', 'PR');
+
+select * from clientes;
+
+insert into clientes
+(nome_cliente, genero, nascimento, cidade, uf)
+values
+('Carlos', 'M', '1990-08-15', default, default);
+
+select * from clientes;
+
+insert into clientes
+values
+(default, 'Daniel', 'M', '1990-10-30', default, default);
+
+select * from clientes;
+
+insert into clientes
+(nome_cliente, genero, nascimento)
+values
+('Daniela', 'F', '2000-09-17');
+
+select * from clientes;
+
+insert into clientes
+(nome_cliente, genero, nascimento, cidade, uf)
+values
+('Elaine', 'F', '1995-09-11', default, default),
+('Fabio', 'M', '1995-12-22', 'Ponta Grossa', default),
+('Gilberto', 'M', '1996-11-23', 'Santo André', 'SP');
+
+select * from clientes;
