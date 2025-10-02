@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+	int lin, col, altura;
+	
+	printf("Informe a altura do triangulo: ");
+	scanf("%d", &altura);
+	
+	for(lin=1; lin<=altura; lin++){
+		for(col=1; col<=altura; col++){
+			if(col <= lin){
+				printf("#");
+			}
+		}
+		printf("\n");
+	}
+	
+	return 0;
+}	
