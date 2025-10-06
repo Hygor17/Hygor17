@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+        <style>
+            #area{
+                width: 70px;
+                height: 70px;
+                background: yellow;
+                padding: 30px;
+            }
+
+        </style>
+    </head>
+<body>
+        
+    <div id="area">
+        > clique <
+
+    </div>
+        <script>
+
+            var a = document.getElementById("area");
+            a.addEventListener("click", aoClicar);
+            a.addEventListener("mouseenter", aoEntrar);
+            a.addEventListener("mouseout", aoSair);
+
+            function aoClicar(){
+                a.innerText = "Clicou";
+                a.style.background = "red";
+
+            }
+
+            function aoEntrar(){
+                a.innerText = "Bem vindo";
+                a.style.background = "blue";
+            }
+
+            function aoSair(){
+                a.innerText = "Adeus";
+                a.style.background = "green";
+            }
+
+        </script>
+    </body>
+</html>
