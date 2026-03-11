@@ -1,0 +1,46 @@
+<?php
+//Declaração de variaveis 
+$variavel_em_php = "Não tem Tipo";
+$outra_variavel = 123;
+$terceira_variavel;
+
+echo "Olá, Mundo!<br> \n" . PHP_EOL;
+print "Olá, Mundo!<br>";
+
+$var = print "teste";
+
+echo "<hr> $var";
+
+//TypeCast
+$inteiro = (int) 10;
+$float = (float) 10;
+$bool = (bool) 0;
+$texto = (float)10 + ".10";
+
+//Exibir informações
+//Tag pre exibe a predefinição de texto
+echo "<pre>";
+//var_dump exclusivamente para testes
+var_dump($inteiro);
+var_dump($float);
+var_dump($bool);
+var_dump($texto);
+
+
+echo "</pre>";
+
+$vetor = [1,2,6,8,9,2];
+//$vetor = array(1,2,6,8,9,2);
+
+$array_assossiativo =[
+    1 => "Primeiro Valor",
+    2.5 => "Segundo Valor",
+    "A12" => "Terceiro Valor"
+];
+
+echo "<pre>";
+var_dump($array_assossiativo);
+var_dump($vetor);
+echo "</pre>";
+
+?>
