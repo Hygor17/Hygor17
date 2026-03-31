@@ -1,0 +1,98 @@
+import java.io.*;
+
+public class ArquivoEscola {
+
+    public static void gravar(String nomeArquivo) throws IOException {
+        BufferedWriter bw = new BufferedWriter(new FileWriter(nomeArquivo));
+
+        bw.write("Ana;20"); bw.newLine();
+        bw.write("Carlos;25"); bw.newLine();
+        bw.write("Beatriz;22"); bw.newLine();
+
+    }
+
+    public static void ler(String nomeArquivo) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader(nomeArquivo));
+
+        String linha;
+        int soma = 0;
+        int count = 0;
+
+        System.out.println("Lista de Alunos");
+
+        while ((linha = br.readLine()) != null) {
+            String[] dados = linha.split(";");
+            String nome = dados[0];
+            int idade = Integer.parseInt(dados[1]);
+
+            System.out.println(nome + "  " + idade);
+
+            soma += idade;
+            count++;
+        }
+
+        double media = 0;
+        if (count > 0) {
+            media = (double) soma / count;
+        }
+
+        System.out.println("  ");
+        System.out.println("Soma: " + soma);
+        System.out.println("Media: " + media);
+
+    }
+
+    public static void contar(String nomeArquivo) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader(nomeArquivo));
+
+        int linhas = 0;
+
+        while (br.readLine() != null) {
+            linhas++;
+        }
+
+        System.out.println("Total de registros: " + linhas);
+    }
+
+    public static void append(String nomeArquivo, String nome, int idade) throws IOException {
+        BufferedWriter bw = new BufferedWriter(new FileWriter(nomeArquivo, true));
+
+        bw.write(nome + ";" + idade);
+        bw.newLine();
+
+    }
+
+    
+    public static void relatorio(String entrada, String saida) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader(entrada));
+
+        String linha;
+        int soma = 0;
+        int count = 0;
+
+        while ((linha = br.readLine()) != null) {
+            String[] dados = linha.split(";");
+            int idade = Integer.parseInt(dados[1]);
+
+            soma += idade;
+            count++;
+        }
+
+        double media = 0;
+        if (count > 0) {
+            media = (double) soma / count;
+        }
+
+        BufferedWriter bw = new BufferedWriter(new FileWriter(saida));
+        bw.write("Media geral da turma: " + media);
+        bw.close();
+    }
+    public static void main(String[] args) throws IOException {
+        String arquivo = "alunos.txt";
+            gravar(arquivo);
+            append(arquivo, "Joao", 30);
+            ler(arquivo);
+            contar(arquivo);
+            relatorio(arquivo, "relatorio.txt");
+    }
+}
